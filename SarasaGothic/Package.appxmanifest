@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" IgnorableNamespaces="uap mp uap4">
+  <Identity Name="8966ZhaobangChina.58591251FE075" Publisher="CN=584E9342-CAA7-4820-8744-3B371B8C8C66" Version="1.0.3.0" />
+  <mp:PhoneIdentity PhoneProductId="fbf26248-b509-4934-a2ad-25bb3fd47bdc" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>更纱黑体</DisplayName>
+    <PublisherDisplayName>兆邦中国(Zhaobang China)</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="SarasaGothic.App">
+      <uap:VisualElements DisplayName="更纱黑体" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="SarasaGothic" BackgroundColor="white">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="white" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap4:Extension Category="windows.sharedFonts">
+          <uap4:SharedFonts>
+            <uap4:Font File="Assets\Fonts\sarasa-bold.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-bolditalic.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-extralight.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-extralightitalic.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-italic.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-light.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-lightitalic.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-medium.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-mediumitalic.ttc" />
+            <uap4:Font File="Assets\Fonts\sarasa-regular.ttc" />
+          </uap4:SharedFonts>
+        </uap4:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

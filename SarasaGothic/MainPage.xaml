@@ -1,0 +1,54 @@
+﻿<Page x:Class="SarasaGothic.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="using:SarasaGothic"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Name="page"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      mc:Ignorable="d">
+
+    <StackPanel Margin="6">
+        <TextBlock Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
+                   FontSize="{StaticResource TextStyleExtraLargeFontSize}"
+                   Text="更纱黑体" TextAlignment="Center" />
+        <TextBlock MaxWidth="300" Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
+                   TextAlignment="Center" TextWrapping="WrapWholeWords">
+            Copyright (c) 2015-2018 Belleve Invis (belleve@typeof.net)
+        </TextBlock>
+        <HyperlinkButton Margin="6,0" HorizontalAlignment="Center"
+                         Click="{x:Bind ViewModel.ViewInSettings}"
+                         FontFamily="Sarasa UI SC">
+            在“设置”中查看…
+        </HyperlinkButton>
+        <HyperlinkButton Margin="6,0" HorizontalAlignment="Center"
+                         Click="{x:Bind ViewModel.RateAndReview}"
+                         Content="打分并评论…" FontFamily="Sarasa UI SC" />
+        <HyperlinkButton Margin="6,0" HorizontalAlignment="Center"
+                         Click="{x:Bind ViewModel.ShowLicense}"
+                         Content="使用条款…" FontFamily="Sarasa UI SC" />
+        <TextBox MaxWidth="300" Margin="6" FontFamily="Sarasa UI SC" Header="预览文本"
+                 Text="{x:Bind ViewModel.PreviewText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <ListView HorizontalAlignment="Center" ItemsSource="{x:Bind ViewModel.FontPreviews}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:FontPreviewItem">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Margin="0,0,6,0"
+                                   FontFamily="{x:Bind Font}"
+                                   Text="{x:Bind Name}" />
+                        <TextBlock Grid.Column="1" Margin="6,0,0,0" HorizontalAlignment="Right"
+                                   FontFamily="{x:Bind Font}"
+                                   Text="{Binding ElementName=page, Path=ViewModel.PreviewText, Mode=TwoWay}"
+                                   TextAlignment="Right" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Page>
