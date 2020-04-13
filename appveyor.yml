@@ -1,0 +1,29 @@
+version: Build {build}
+pull_requests:
+  do_not_increment_build_number: true
+branches:
+  only:
+  - master
+image: Visual Studio 2017
+environment:
+  PUBLISH_CLIENTSECRET:
+    secure: l2B3jA9RUh88uj5DerI2d1MnAISJ+NnbORr2DYs/K/Jes1FkxLD+pqlK8Vb23MlB
+install:
+- ps: .\StoreUpload\Install-StoreBroker.ps1
+cache: '%USERPROFILE%\.nuget\packages -> **\*.csproj'
+build_script:
+- ps: >-
+    Push-Location SarasaGothic
+
+    .\DownloadContents.ps1
+
+    Pop-Location
+
+    .\Build\Config.ps1
+
+    .\Build\Build.ps1
+deploy_script:
+- ps: >-
+    .\StoreUpload\Configs\Config.ps1
+
+    .\StoreUpload\Publish.ps1
