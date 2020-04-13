@@ -18,10 +18,12 @@ namespace SarasaGothic
             FontPreviews = new[]
             {
                 new FontPreviewItem("更纱黑体 SC", "Sarasa Gothic SC"),
+                new FontPreviewItem("更纱黑体 UI SC", "Sarasa UI SC"),
                 new FontPreviewItem("等距更纱黑体 SC", "Sarasa Mono SC"),
-                new FontPreviewItem("等距更纱黑体 T SC", "Sarasa Mono T SC"),
+                new FontPreviewItem("等距更纱黑体 Slab SC", "Sarasa Mono Slab SC"),
                 new FontPreviewItem("Sarasa Term SC", "Sarasa Term SC"),
-                new FontPreviewItem("更纱黑体 UI SC", "Sarasa UI SC")
+                new FontPreviewItem("Sarasa Fixed SC", "Sarasa Fixed SC"),
+                new FontPreviewItem("Sarasa Fixed Slab SC", "Sarasa Fixed Slab SC"),
             };
         }
 
