@@ -45,7 +45,7 @@
     <!-- _locComment_text="{MaxLength=255} App DevStudio" -->
   </DevStudio>
   <ReleaseNotes _locID="App_ReleaseNotes">
-    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->
+    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.6.0：字体版本更新到0.12.6
   </ReleaseNotes>
   <ScreenshotCaptions>
     <!-- Valid length: 200 character limit, up to 9 elements per platform -->
@@ -85,7 +85,7 @@
     <!-- _locComment_text="{MaxLength=10000} Additional License Terms" -->
   </AdditionalLicenseTerms>
   <WebsiteURL _locID="App_WebsiteURL">
-    <!-- _locComment_text="{MaxLength=2048} WebsiteURL" -->
+    <!-- _locComment_text="{MaxLength=2048} WebsiteURL" -->https://github.com/taoyouh/SarasaGothicAppx
   </WebsiteURL>
   <SupportContactInfo _locID="App_SupportContactInfo">
     <!-- _locComment_text="{MaxLength=2048} Support Contact Info" -->zhaobang.china@hotmail.com</SupportContactInfo>
