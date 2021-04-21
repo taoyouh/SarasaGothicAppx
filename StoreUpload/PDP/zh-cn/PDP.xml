@@ -20,9 +20,11 @@
     Sarasa Mono / 等距更纱黑体：基于Iosevka，有连字，半宽破折号
     Sarasa Term：基于Iosevka，无连字，半宽破折号
 包含汉字字形：
+    CL：传统字形
     SC：简体中文
     TC：台湾繁体中文
     J：日文
+    K：韩文
     HC：香港繁体中文</Description>
   <ShortDescription _locID="App_ShortDescription">
     <!-- Only used for games. This description appears in the Information section of the Game Hub on Xbox One, and helps customers understand more about your game. -->
@@ -45,7 +47,8 @@
     <!-- _locComment_text="{MaxLength=255} App DevStudio" -->
   </DevStudio>
   <ReleaseNotes _locID="App_ReleaseNotes">
-    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.6.0：字体版本更新到0.12.6
+    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.11.0：字体版本更新到0.30.2
+1.0.6.0：字体版本更新到0.12.6
   </ReleaseNotes>
   <ScreenshotCaptions>
     <!-- Valid length: 200 character limit, up to 9 elements per platform -->
