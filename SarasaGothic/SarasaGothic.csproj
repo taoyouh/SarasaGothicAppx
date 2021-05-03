@@ -173,8 +173,17 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Fonts\sarasa-bold.ttc" />
+    <Content Include="Assets\Fonts\sarasa-bolditalic.ttc" />
+    <Content Include="Assets\Fonts\sarasa-extralight.ttc" />
+    <Content Include="Assets\Fonts\sarasa-extralightitalic.ttc" />
+    <Content Include="Assets\Fonts\sarasa-italic.ttc" />
+    <Content Include="Assets\Fonts\sarasa-light.ttc" />
+    <Content Include="Assets\Fonts\sarasa-lightitalic.ttc" />
+    <Content Include="Assets\Fonts\sarasa-regular.ttc" />
+    <Content Include="Assets\Fonts\sarasa-semibold.ttc" />
+    <Content Include="Assets\Fonts\sarasa-semibolditalic.ttc" />
     <None Include="Package.StoreAssociation.xml" />
-    <Content Include="Assets\Fonts\*.ttc" />
     <None Include="SarasaGothic_StoreKey.pfx" />
     <None Include="SarasaGothic_TemporaryKey.pfx" />
   </ItemGroup>
