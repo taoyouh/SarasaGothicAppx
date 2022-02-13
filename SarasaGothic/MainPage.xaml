@@ -8,7 +8,7 @@
     <StackPanel Margin="6">
         <TextBlock Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
                    FontSize="{StaticResource TextStyleExtraLargeFontSize}"
-                   Text="更纱黑体 0.31.1" TextAlignment="Center" />
+                   Text="更纱黑体 0.35.9" TextAlignment="Center" />
         <TextBlock MaxWidth="300" Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
                    TextAlignment="Center" TextWrapping="WrapWholeWords">
             Copyright (c) 2015-2018 Belleve Invis (belleve@typeof.net)
