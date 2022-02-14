@@ -11,7 +11,7 @@ namespace SarasaGothic
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
-        private string _previewText = "“” — abc — Il1 — 0O";
+        private string _previewText = "“abc” => Il1 — 0O";
 
         public MainPageViewModel()
         {
@@ -22,6 +22,7 @@ namespace SarasaGothic
                 new FontPreviewItem("等距更纱黑体 SC", "Sarasa Mono SC"),
                 new FontPreviewItem("等距更纱黑体 Slab SC", "Sarasa Mono Slab SC"),
                 new FontPreviewItem("Sarasa Term SC", "Sarasa Term SC"),
+                new FontPreviewItem("Sarasa Term Slab SC", "Sarasa Term Slab SC"),
                 new FontPreviewItem("Sarasa Fixed SC", "Sarasa Fixed SC"),
                 new FontPreviewItem("Sarasa Fixed Slab SC", "Sarasa Fixed Slab SC"),
             };
