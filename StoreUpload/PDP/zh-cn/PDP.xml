@@ -14,11 +14,11 @@
     <!-- _locComment_text="{MaxLength=10000} App Description" -->更纱黑体是一种中文编程字体，支持在中文Windows系统的命令行窗口中使用。
 
 包含样式：
-    Sarasa Gothic / 更纱黑体：基于Noto Sans，全宽引号
-    Sarasa UI / 更纱黑体 UI：基于Noto Sans窄引号
-    Sarasa Mono T / 等距更纱黑体 T：基于Iosevka，有连字，全宽破折号
-    Sarasa Mono / 等距更纱黑体：基于Iosevka，有连字，半宽破折号
-    Sarasa Term：基于Iosevka，无连字，半宽破折号
+    Sarasa Gothic / 更纱黑体：基于Inter，全宽引号
+    Sarasa UI / 更纱黑体 UI：基于Inter，窄引号
+    Sarasa Mono / 等距更纱黑体：基于Iosevka，有连字，全宽破折号（em dash）
+    Sarasa Term：基于Iosevka，有连字，全宽破折号（em dash）
+    Sarasa Fixed：基于Iosevka，无连字，半宽破折号（em dash）
 包含汉字字形：
     CL：传统字形
     SC：简体中文
@@ -47,7 +47,7 @@
     <!-- _locComment_text="{MaxLength=255} App DevStudio" -->
   </DevStudio>
   <ReleaseNotes _locID="App_ReleaseNotes">
-    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.13.0：字体版本更新到0.35.9
+    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.14.0：字体版本更新到0.35.9
 1.0.12.0：字体版本更新到0.31.1
 1.0.11.0：字体版本更新到0.30.2
 1.0.6.0：字体版本更新到0.12.6
