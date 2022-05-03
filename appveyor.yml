@@ -7,7 +7,7 @@ branches:
 image: Visual Studio 2017
 environment:
   PUBLISH_CLIENTSECRET:
-    secure: K1mI+l29HTrfnIOGVgYuwVfj1AisWNfvlPIAHQtjBZIR2FEkfUEEYuPX75m894Al
+    secure: juoMFybzn0nj+Xn4ZaCf64sP6jj5aplTJl7bS+4ILu7J1LyqiX279RJhgM8TE5rn
 install:
 - ps: .\StoreUpload\Install-StoreBroker.ps1
 cache: '%USERPROFILE%\.nuget\packages -> **\*.csproj'
