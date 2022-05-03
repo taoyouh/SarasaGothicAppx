@@ -94,7 +94,7 @@
     <!-- _locComment_text="{MaxLength=2048} WebsiteURL" -->https://github.com/taoyouh/SarasaGothicAppx
   </WebsiteURL>
   <SupportContactInfo _locID="App_SupportContactInfo">
-    <!-- _locComment_text="{MaxLength=2048} Support Contact Info" -->zhaobang.china@hotmail.com</SupportContactInfo>
+    <!-- _locComment_text="{MaxLength=2048} Support Contact Info" -->contact@taoyouh.cn</SupportContactInfo>
   <PrivacyPolicyURL _locID="App_PrivacyURL">
     <!-- _locComment_text="{MaxLength=2048} Privacy Policy URL" -->
   </PrivacyPolicyURL>
