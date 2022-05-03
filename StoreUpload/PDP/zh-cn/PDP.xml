@@ -47,7 +47,8 @@
     <!-- _locComment_text="{MaxLength=255} App DevStudio" -->
   </DevStudio>
   <ReleaseNotes _locID="App_ReleaseNotes">
-    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.14.0：字体版本更新到0.35.9
+    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.15.0：字体版本更新到0.36.3
+1.0.14.0：字体版本更新到0.35.9
 1.0.12.0：字体版本更新到0.31.1
 1.0.11.0：字体版本更新到0.30.2
 1.0.6.0：字体版本更新到0.12.6
@@ -93,7 +94,7 @@
     <!-- _locComment_text="{MaxLength=2048} WebsiteURL" -->https://github.com/taoyouh/SarasaGothicAppx
   </WebsiteURL>
   <SupportContactInfo _locID="App_SupportContactInfo">
-    <!-- _locComment_text="{MaxLength=2048} Support Contact Info" -->zhaobang.china@hotmail.com</SupportContactInfo>
+    <!-- _locComment_text="{MaxLength=2048} Support Contact Info" -->contact@taoyouh.cn</SupportContactInfo>
   <PrivacyPolicyURL _locID="App_PrivacyURL">
     <!-- _locComment_text="{MaxLength=2048} Privacy Policy URL" -->
   </PrivacyPolicyURL>
