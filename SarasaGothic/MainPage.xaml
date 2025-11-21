@@ -8,10 +8,10 @@
     <StackPanel Margin="6">
         <TextBlock Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
                    FontSize="{StaticResource TextStyleExtraLargeFontSize}"
-                   Text="更纱黑体 0.36.3" TextAlignment="Center" />
+                   Text="更纱黑体 1.0.13" TextAlignment="Center" />
         <TextBlock MaxWidth="300" Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
                    TextAlignment="Center" TextWrapping="WrapWholeWords">
-            Copyright (c) 2015-2018 Belleve Invis (belleve@typeof.net)
+            Copyright (c) 2015-2022, Renzhi Li (aka. Belleve Invis, belleve@typeof.net)
         </TextBlock>
         <HyperlinkButton Margin="6,0" HorizontalAlignment="Center"
                          Click="{x:Bind ViewModel.ViewInSettings}"
