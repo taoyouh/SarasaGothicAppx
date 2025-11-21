@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" IgnorableNamespaces="uap mp uap4">
-  <Identity Name="8966ZhaobangChina.58591251FE075" Publisher="CN=584E9342-CAA7-4820-8744-3B371B8C8C66" Version="1.0.16.0" />
+  <Identity Name="8966ZhaobangChina.58591251FE075" Publisher="CN=584E9342-CAA7-4820-8744-3B371B8C8C66" Version="1.0.17.0" />
   <mp:PhoneIdentity PhoneProductId="fbf26248-b509-4934-a2ad-25bb3fd47bdc" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>更纱黑体</DisplayName>

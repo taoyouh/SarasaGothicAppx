@@ -1,4 +1,4 @@
-$version = "1.0.13"
+$version = "1.0.34"
 
 if (-not $(Test-Path ./Temp))
 {
