@@ -27,6 +27,13 @@ namespace SarasaGothic
             this.InitializeComponent();
         }
 
-        public MainPageViewModel ViewModel { get; } = new MainPageViewModel();
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            ViewModel = new MainPageViewModel(Frame);
+        }
+
+        public MainPageViewModel ViewModel { get; private set; }
     }
 }
