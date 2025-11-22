@@ -47,13 +47,14 @@
     <!-- _locComment_text="{MaxLength=255} App DevStudio" -->
   </DevStudio>
   <ReleaseNotes _locID="App_ReleaseNotes">
-    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.17.0：字体版本更新到1.0.34
-1.0.16.0：字体版本更新到1.0.13
-1.0.15.0：字体版本更新到0.36.3
-1.0.14.0：字体版本更新到0.35.9
-1.0.12.0：字体版本更新到0.31.1
-1.0.11.0：字体版本更新到0.30.2
-1.0.6.0：字体版本更新到0.12.6
+    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.18：更新版权和支持信息
+1.0.17：字体版本更新到1.0.34
+1.0.16：字体版本更新到1.0.13
+1.0.15：字体版本更新到0.36.3
+1.0.14：字体版本更新到0.35.9
+1.0.12：字体版本更新到0.31.1
+1.0.11：字体版本更新到0.30.2
+1.0.6：字体版本更新到0.12.6
   </ReleaseNotes>
   <ScreenshotCaptions>
     <!-- Valid length: 200 character limit, up to 9 elements per platform -->
@@ -88,15 +89,16 @@
     <!-- Valid length: 200 character limit, up to 11 elements -->
   </MinimumHardware>
   <CopyrightAndTrademark _locID="App_CopyrightandTrademark">
-    <!-- _locComment_text="{MaxLength=200} Copyright and Trademark" -->Copyright (c) 2015-2018 Belleve Invis (belleve@typeof.net)</CopyrightAndTrademark>
+    <!-- _locComment_text="{MaxLength=200} Copyright and Trademark" -->
+  </CopyrightAndTrademark>
   <AdditionalLicenseTerms _locID="App_AdditionalLicenseTerms">
-    <!-- _locComment_text="{MaxLength=10000} Additional License Terms" -->
+    <!-- _locComment_text="{MaxLength=10000} Additional License Terms" -->https://www.taoyouh.cn/apps/sarasa-gothic-appx/license/
   </AdditionalLicenseTerms>
   <WebsiteURL _locID="App_WebsiteURL">
-    <!-- _locComment_text="{MaxLength=2048} WebsiteURL" -->https://github.com/taoyouh/SarasaGothicAppx
+    <!-- _locComment_text="{MaxLength=2048} WebsiteURL" -->https://www.taoyouh.cn/apps/sarasa-gothic-appx/
   </WebsiteURL>
   <SupportContactInfo _locID="App_SupportContactInfo">
-    <!-- _locComment_text="{MaxLength=2048} Support Contact Info" -->contact@taoyouh.cn</SupportContactInfo>
+    <!-- _locComment_text="{MaxLength=2048} Support Contact Info" -->https://www.taoyouh.cn/apps/sarasa-gothic-appx/</SupportContactInfo>
   <PrivacyPolicyURL _locID="App_PrivacyURL">
     <!-- _locComment_text="{MaxLength=2048} Privacy Policy URL" -->
   </PrivacyPolicyURL>

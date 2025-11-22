@@ -11,8 +11,8 @@
     <AssemblyName>SarasaGothic</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -123,20 +123,31 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AppShell.xaml.cs">
+      <DependentUpon>AppShell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FontPreviewItem.cs" />
+    <Compile Include="LicensePage.xaml.cs">
+      <DependentUpon>LicensePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\FontVersion.txt" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -173,16 +184,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="Assets\Fonts\sarasa-bold.ttc" />
-    <Content Include="Assets\Fonts\sarasa-bolditalic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-extralight.ttc" />
-    <Content Include="Assets\Fonts\sarasa-extralightitalic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-italic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-light.ttc" />
-    <Content Include="Assets\Fonts\sarasa-lightitalic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-regular.ttc" />
-    <Content Include="Assets\Fonts\sarasa-semibold.ttc" />
-    <Content Include="Assets\Fonts\sarasa-semibolditalic.ttc" />
+    <Content Include="Assets\License.md" />
     <None Include="Package.StoreAssociation.xml" />
     <None Include="SarasaGothic_StoreKey.pfx" />
     <None Include="SarasaGothic_TemporaryKey.pfx" />
@@ -200,6 +202,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LicensePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -208,6 +222,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls.Markdown">
+      <Version>7.1.3</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
@@ -221,4 +238,34 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <FontVersion>1.0.34</FontVersion>
+    <FontPackageFolder>./Temp/</FontPackageFolder>
+    <FontPackageFileName>sarasa-gothic-ttc-$(FontVersion).7z</FontPackageFileName>
+    <FontPackageFilePath>$(FontPackageFolder)$(FontPackageFileName)</FontPackageFilePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <FontAsset Include="Assets\Fonts\sarasa-bold.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-bolditalic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-extralight.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-extralightitalic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-italic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-light.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-lightitalic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-regular.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-semibold.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-semibolditalic.ttc" />
+    <Content Include="@(FontAsset)" />
+  </ItemGroup>
+  <Target Name="DownloadFonts" BeforeTargets="UnzipFontAssets" Condition="!Exists('$(FontPackageFilePath)')">
+    <Message Text="Downloading font package $(FontPackageFileName)" />
+    <DownloadFile SourceUrl="https://github.com/be5invis/Sarasa-Gothic/releases/download/v$(FontVersion)/Sarasa-TTC-$(FontVersion).7z" DestinationFolder="$(FontPackageFolder)" DestinationFileName="$(FontPackageFileName)" />
+  </Target>
+  <Target Name="UnzipFontAssets" BeforeTargets="BeforeBuild" Inputs="$(FontPackageFilePath)" Outputs="@(FontAsset);Assets\FontVersion.txt">
+    <Message Text="Extracting font package $(FontPackageFileName)" />
+    <Delete Files="@(FontAsset)" />
+    <Exec Command="7z x $(FontPackageFilePath) -o./Assets/Fonts -aoa" />
+    <Touch Files="@(FontAsset)" AlwaysCreate="false" />
+    <WriteLinesToFile File="Assets\FontVersion.txt" Lines="$(FontVersion)" />
+  </Target>
 </Project>

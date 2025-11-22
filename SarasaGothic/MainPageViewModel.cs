@@ -5,15 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.System;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
 namespace SarasaGothic
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
+        private readonly Frame _frame;
         private string _previewText = "“abc” => Il1 — 0O";
 
-        public MainPageViewModel()
+        public MainPageViewModel(Frame frame)
         {
             FontPreviews = new[]
             {
@@ -26,6 +28,8 @@ namespace SarasaGothic
                 new FontPreviewItem("Sarasa Fixed SC", "Sarasa Fixed SC"),
                 new FontPreviewItem("Sarasa Fixed Slab SC", "Sarasa Fixed Slab SC"),
             };
+
+            _frame = frame ?? throw new ArgumentNullException(nameof(frame));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -50,14 +54,9 @@ namespace SarasaGothic
             await Launcher.LaunchUriAsync(new Uri("ms-settings:fonts"));
         }
 
-        public async void RateAndReview()
+        public void ShowAboutPage()
         {
-            await Launcher.LaunchUriAsync(new Uri("ms-windows-store://review/?ProductId=9MW0M424NCZ7"));
-        }
-
-        public async void ShowLicense()
-        {
-            await Launcher.LaunchUriAsync(new Uri("https://github.com/be5invis/Sarasa-Gothic/blob/master/LICENSE"));
+            _frame.Navigate(typeof(AboutPage));
         }
     }
 }
