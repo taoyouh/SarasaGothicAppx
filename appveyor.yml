@@ -19,5 +19,5 @@ deploy_script:
 cache:
 - '%USERPROFILE%\.nuget\packages -> **\*.csproj'
 artifacts:
-- path: '.\AppxPackages'
-  name: AppxPackages
+- path: '.\SarasaGothic/AppPackages'
+  name: AppPackages
