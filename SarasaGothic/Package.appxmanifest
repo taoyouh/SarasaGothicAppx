@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" IgnorableNamespaces="uap mp uap4">
-  <Identity Name="8966ZhaobangChina.58591251FE075" Publisher="CN=584E9342-CAA7-4820-8744-3B371B8C8C66" Version="1.0.17.0" />
+  <Identity Name="8966ZhaobangChina.58591251FE075" Publisher="CN=584E9342-CAA7-4820-8744-3B371B8C8C66" Version="1.0.18.0" />
   <mp:PhoneIdentity PhoneProductId="fbf26248-b509-4934-a2ad-25bb3fd47bdc" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>更纱黑体</DisplayName>
+    <DisplayName>更纱黑体 Microsoft Store 版</DisplayName>
     <PublisherDisplayName>桃又 (taoyouh)</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="SarasaGothic.App">
-      <uap:VisualElements DisplayName="更纱黑体" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="SarasaGothic" BackgroundColor="white">
+      <uap:VisualElements DisplayName="更纱黑体 Microsoft Store 版" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="SarasaGothic" BackgroundColor="white">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="white" />

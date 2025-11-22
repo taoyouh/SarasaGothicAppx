@@ -8,22 +8,17 @@
     <StackPanel Margin="6">
         <TextBlock Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
                    FontSize="{StaticResource TextStyleExtraLargeFontSize}"
-                   Text="更纱黑体 1.0.34" TextAlignment="Center" />
-        <TextBlock MaxWidth="300" Margin="6" HorizontalAlignment="Center" FontFamily="Sarasa UI SC"
-                   TextAlignment="Center" TextWrapping="WrapWholeWords">
-            Copyright (c) 2015-2022, Renzhi Li (aka. Belleve Invis, belleve@typeof.net)
-        </TextBlock>
+                   Text="更纱黑体 Microsoft Store 版" TextAlignment="Center" />
         <HyperlinkButton Margin="6,0" HorizontalAlignment="Center"
                          Click="{x:Bind ViewModel.ViewInSettings}"
                          FontFamily="Sarasa UI SC">
             在“设置”中查看…
         </HyperlinkButton>
         <HyperlinkButton Margin="6,0" HorizontalAlignment="Center"
-                         Click="{x:Bind ViewModel.RateAndReview}"
-                         Content="打分并评论…" FontFamily="Sarasa UI SC" />
-        <HyperlinkButton Margin="6,0" HorizontalAlignment="Center"
-                         Click="{x:Bind ViewModel.ShowLicense}"
-                         Content="使用条款…" FontFamily="Sarasa UI SC" />
+                         Click="{x:Bind ViewModel.ShowAboutPage}"
+                         FontFamily="Sarasa UI SC">
+            关于…
+        </HyperlinkButton>
         <TextBox MaxWidth="300" Margin="6" FontFamily="Sarasa UI SC" Header="预览文本"
                  Text="{x:Bind ViewModel.PreviewText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         <ListView HorizontalAlignment="Center" ItemsSource="{x:Bind ViewModel.FontPreviews}">
