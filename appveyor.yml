@@ -11,13 +11,8 @@ environment:
 install:
 - ps: .\AppVeyor\Install.ps1
 build_script:
-- ps: >-
-    .\AppVeyor\Build.ps1
+- ps: .\AppVeyor\Build.ps1
 deploy_script:
-- ps: >-
-    .\AppVeyor\Publish.ps1
+- ps: .\AppVeyor\Publish.ps1
 cache:
 - '%USERPROFILE%\.nuget\packages -> **\*.csproj'
-artifacts:
-- path: '.\AppxPackages'
-  name: AppxPackages
