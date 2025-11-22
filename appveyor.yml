@@ -1,30 +1,23 @@
 version: Build {build}
-pull_requests:
-  do_not_increment_build_number: true
 branches:
   only:
   - master
+  - dev
 image: Visual Studio 2017
 environment:
   global:
     PUBLISH_CLIENTSECRET:
       secure: W05b1l4blNjHLLvLzmR7/+AGocyZL82Chp0Z3vNf3cXXUVlgAtsabC33KQ3T0rfS
 install:
-- ps: .\StoreUpload\Install-StoreBroker.ps1
-cache: '%USERPROFILE%\.nuget\packages -> **\*.csproj'
+- ps: .\AppVeyor\Install.ps1
 build_script:
 - ps: >-
-    Push-Location SarasaGothic
-
-    .\DownloadContents.ps1
-
-    Pop-Location
-
-    .\Build\Config.ps1
-
-    .\Build\Build.ps1
+    .\AppVeyor\Build.ps1
 deploy_script:
 - ps: >-
-    .\StoreUpload\Configs\Config.ps1
-
-    .\StoreUpload\Publish.ps1
+    .\AppVeyor\Publish.ps1
+cache:
+- '%USERPROFILE%\.nuget\packages -> **\*.csproj'
+artifacts:
+- path: '.\AppxPackages'
+  name: AppxPackages

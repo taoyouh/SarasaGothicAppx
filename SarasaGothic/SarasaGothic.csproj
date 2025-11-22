@@ -173,16 +173,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="Assets\Fonts\sarasa-bold.ttc" />
-    <Content Include="Assets\Fonts\sarasa-bolditalic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-extralight.ttc" />
-    <Content Include="Assets\Fonts\sarasa-extralightitalic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-italic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-light.ttc" />
-    <Content Include="Assets\Fonts\sarasa-lightitalic.ttc" />
-    <Content Include="Assets\Fonts\sarasa-regular.ttc" />
-    <Content Include="Assets\Fonts\sarasa-semibold.ttc" />
-    <Content Include="Assets\Fonts\sarasa-semibolditalic.ttc" />
     <None Include="Package.StoreAssociation.xml" />
     <None Include="SarasaGothic_StoreKey.pfx" />
     <None Include="SarasaGothic_TemporaryKey.pfx" />
@@ -221,4 +211,33 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <FontVersion>1.0.34</FontVersion>
+    <FontPackageFolder>./Temp/</FontPackageFolder>
+    <FontPackageFileName>sarasa-gothic-ttc-$(FontVersion).7z</FontPackageFileName>
+    <FontPackageFilePath>$(FontPackageFolder)$(FontPackageFileName)</FontPackageFilePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <FontAsset Include="Assets\Fonts\sarasa-bold.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-bolditalic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-extralight.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-extralightitalic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-italic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-light.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-lightitalic.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-regular.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-semibold.ttc" />
+    <FontAsset Include="Assets\Fonts\sarasa-semibolditalic.ttc" />
+    <Content Include="@(FontAsset)" />
+  </ItemGroup>
+  <Target Name="DownloadFonts" BeforeTargets="UnzipFontAssets" Condition="!Exists('$(FontPackageFilePath)')">
+    <Message Text="Downloading font package $(FontPackageFileName)" />
+    <DownloadFile SourceUrl="https://github.com/be5invis/Sarasa-Gothic/releases/download/v$(FontVersion)/Sarasa-TTC-$(FontVersion).7z" DestinationFolder="$(FontPackageFolder)" DestinationFileName="$(FontPackageFileName)" />
+  </Target>
+  <Target Name="UnzipFontAssets" BeforeTargets="BeforeBuild" Inputs="$(FontPackageFilePath)" Outputs="@(FontAsset)">
+    <Message Text="Extracting font package $(FontPackageFileName)" />
+    <Delete Files="@(FontAsset)" />
+    <Exec Command="7z x $(FontPackageFilePath) -o./Assets/Fonts -aoa" />
+    <Touch Files="@(FontAsset)" AlwaysCreate="false" />
+  </Target>
 </Project>
