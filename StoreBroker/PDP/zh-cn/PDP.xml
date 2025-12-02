@@ -47,7 +47,8 @@
     <!-- _locComment_text="{MaxLength=255} App DevStudio" -->
   </DevStudio>
   <ReleaseNotes _locID="App_ReleaseNotes">
-    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.18：更新版权和支持信息
+    <!-- _locComment_text="{MaxLength=1500} App Release Note" -->1.0.19：字体版本更新到1.0.35
+1.0.18：更新版权和支持信息
 1.0.17：字体版本更新到1.0.34
 1.0.16：字体版本更新到1.0.13
 1.0.15：字体版本更新到0.36.3
