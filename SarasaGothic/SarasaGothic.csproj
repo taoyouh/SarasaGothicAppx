@@ -239,7 +239,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <FontVersion>1.0.34</FontVersion>
+    <FontVersion>1.0.35</FontVersion>
     <FontPackageFolder>./Temp/</FontPackageFolder>
     <FontPackageFileName>sarasa-gothic-ttc-$(FontVersion).7z</FontPackageFileName>
     <FontPackageFilePath>$(FontPackageFolder)$(FontPackageFileName)</FontPackageFilePath>
