@@ -5,8 +5,9 @@ if ($env:APPVEYOR_REPO_BRANCH -eq "master") {
             Add-AppveyorMessage "Published to Store"
         }
         catch {
-            Add-AppveyorMessage "Publishing to Store failed. " -Category Error
-            throw "Publishing to Store failed."
+            Add-AppveyorMessage "Publishing to Store failed: $($_.Message)" -Category Error
+            Write-Host "Publishing to Store failed."
+            throw $_
         }
     }
     else {

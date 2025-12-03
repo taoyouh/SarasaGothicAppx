@@ -6,13 +6,13 @@ if ($null -eq $platform) {
 $firstPlatform = $platform.Split("|")[0]
 
 Write-Host "Restoring packages" -ForegroundColor Cyan
-msbuild $projectPath /t:restore /verbosity:minimal $extraParams
+msbuild $projectPath /t:restore /verbosity:minimal /m $extraParams
 if ($LASTEXITCODE -ne 0) {
     throw ("msbuild exited with code " + $LASTEXITCODE)
 }
 
 Write-Host "Building project" -ForegroundColor Cyan
-msbuild $projectPath /verbosity:minimal /p:AppxBundlePlatforms=$platform /p:platform=$firstPlatform /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload /p:configuration="release" $extraParams
+msbuild $projectPath /verbosity:minimal /p:AppxBundlePlatforms=$platform /p:platform=$firstPlatform /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload /p:configuration="release" /m $extraParams
 if ($LASTEXITCODE -ne 0) {
     throw ("msbuild exited with code " + $LASTEXITCODE)
 }
